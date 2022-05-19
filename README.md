@@ -1,5 +1,6 @@
 # my-dash-frontend
 
+###### run these command first
 ###### step-1 npx create-react-app my-dash-frontend
 ###### step-2 npm install bootstrap
 ###### step-3 fork the repo
