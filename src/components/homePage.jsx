@@ -34,6 +34,13 @@ class Home extends Component {
             src={Background}
             alt="background image"
           />
+          <div className="container__image__desc">
+            <span>Choose a date range</span>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+              quaerat mollitia blanditiis voluptatem aliquam consectetur.
+            </span>
+          </div>
         </div>
         <div className="container__form">
           <form action="http://localhost:3000/" method="get">
