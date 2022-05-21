@@ -9,13 +9,13 @@ class Home extends Component {
       let confirm_pass = document.getElementById("confirm_pass").value;
       if (pass !== confirm_pass) {
         alert("Password did not match");
-      } else if (pass.length == 0 && confirm_pass.length == 0) {
+      } else if (pass.length === 0 && confirm_pass.length === 0) {
         alert("Password cannot be Null");
       }
     };
     const checkMobile = () => {
       let mobile = document.getElementById("mobile").value;
-      let phoneno = /^\d{10}$/;
+      // let phoneno = /^\d{10}$/;
       if (mobile.length < 10) {
         alert("Phone number cannot be less than 10");
         window.history.back();
