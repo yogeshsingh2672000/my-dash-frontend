@@ -10,20 +10,21 @@ class Home extends Component {
       let confirm_pass = document.getElementById("confirm_pass").value;
       if (pass !== confirm_pass) {
         alert("Password did not match");
+      } else if (pass.length == 0 && confirm_pass.length == 0) {
+        alert("Password cannot be Null");
       }
     };
     const checkMobile = () => {
       let mobile = document.getElementById("mobile").value;
       let phoneno = /^\d{10}$/;
-      if (mobile.match(phoneno)) {
-        document
-          .getElementsByClassName("container__form__button")
-          .setAttribute("disabled");
+      if (mobile.length < 10) {
+        alert("Phone number cannot be less than 10");
+        window.history.back();
+      } else if (mobile.length > 10) {
+        alert("Phone number cannot be greater than 10");
       } else {
-        document
-          .getElementsByClassName("container__form__button")
-          .setAttribute("disabled", "true");
-        alert("mobile number is not correct");
+        alert("Phone number is not correct");
+        window.history.back();
       }
     };
     return (
