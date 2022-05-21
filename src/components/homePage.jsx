@@ -15,7 +15,7 @@ class Home extends Component {
           />
         </div>
         <div className="container__form">
-          <form action="#" method="post">
+          <form action="http://localhost:3000/" method="get">
             <h2 className="container__form__heading">Create an account</h2>
             <table className="container__form__table">
               <tr>
@@ -27,6 +27,7 @@ class Home extends Component {
                     className="container__form__input"
                     type="email"
                     name="email"
+                    required
                   />
                 </td>
               </tr>
@@ -39,6 +40,7 @@ class Home extends Component {
                     className="container__form__input"
                     type="password"
                     name="pass"
+                    required
                   />
                 </td>
               </tr>
@@ -52,7 +54,8 @@ class Home extends Component {
                   <input
                     className="container__form__input"
                     type="password"
-                    name="pass"
+                    name="confirm_pass"
+                    required
                   />
                 </td>
               </tr>
@@ -64,6 +67,7 @@ class Home extends Component {
                   className="container__form__input"
                   type="text"
                   name="name"
+                  required
                 />
               </tr>
               <tr>
@@ -75,7 +79,14 @@ class Home extends Component {
                     className="container__form__input"
                     type="tel"
                     name="mobile"
+                    required
                   />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="terms_conditions" />I read and
+                  agree Term and Conditions
                 </td>
               </tr>
             </table>
