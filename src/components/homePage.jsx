@@ -1,10 +1,31 @@
 import React, { Component } from "react";
 import Background from "./background.png";
-import scss from "./homePage.scss";
+import "./homePage.scss";
 
 class Home extends Component {
   // state = {  }
   render() {
+    const checkpass = () => {
+      let pass = document.getElementById("pass").value;
+      let confirm_pass = document.getElementById("confirm_pass").value;
+      if (pass !== confirm_pass) {
+        alert("Password did not match");
+      }
+    };
+    const checkMobile = () => {
+      let mobile = document.getElementById("mobile").value;
+      let phoneno = /^\d{10}$/;
+      if (mobile.match(phoneno)) {
+        document
+          .getElementsByClassName("container__form__button")
+          .setAttribute("disabled");
+      } else {
+        document
+          .getElementsByClassName("container__form__button")
+          .setAttribute("disabled", "true");
+        alert("mobile number is not correct");
+      }
+    };
     return (
       <div className="container">
         <div className="container__image">
@@ -37,6 +58,7 @@ class Home extends Component {
               <tr>
                 <td>
                   <input
+                    id="pass"
                     className="container__form__input"
                     type="password"
                     name="pass"
@@ -52,9 +74,11 @@ class Home extends Component {
               <tr>
                 <td>
                   <input
+                    id="confirm_pass"
                     className="container__form__input"
                     type="password"
                     name="confirm_pass"
+                    onBlur={checkpass}
                     required
                   />
                 </td>
@@ -79,6 +103,8 @@ class Home extends Component {
                     className="container__form__input"
                     type="tel"
                     name="mobile"
+                    id="mobile"
+                    onBlur={checkMobile}
                     required
                   />
                 </td>
