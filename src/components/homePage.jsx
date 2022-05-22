@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Background from "./background.png";
 import "./homePage.scss";
+// import graph from "./graph";
 
 class Home extends Component {
   render() {
@@ -15,15 +16,13 @@ class Home extends Component {
     };
     const checkMobile = () => {
       let mobile = document.getElementById("mobile").value;
-      // let phoneno = /^\d{10}$/;
-      if (mobile.length < 10) {
-        alert("Phone number cannot be less than 10");
-        window.history.back();
-      } else if (mobile.length > 10) {
-        alert("Phone number cannot be greater than 10");
-      } else {
-        alert("Phone number is not correct");
-        window.history.back();
+      let phoneno = /^\d{10}$/;
+      if (mobile.length < 10 || mobile.length > 10) {
+        if (mobile.match(phoneno)) {
+        } else {
+          alert("Phone number cannot be less than or greater than 10");
+          window.href("http://localhost:3000/");
+        }
       }
     };
     return (
@@ -127,9 +126,11 @@ class Home extends Component {
                 </tr>
               </tbody>
             </table>
-            <button className="container__form__button" type="submit">
-              Create an account
-            </button>
+            <a href="">
+              <button className="container__form__button" type="submit">
+                Create an account
+              </button>
+            </a>
           </form>
         </div>
       </div>
