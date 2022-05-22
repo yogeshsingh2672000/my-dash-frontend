@@ -14,7 +14,7 @@
 
 ###### step-6 clone my repo
 
-###### step-7 replace all your my-dash-frontend files except "node module" folder
+###### step-7 replace all your my-dash-frontend files except "node module" into your react-app
 
 ###### step-8 npm start
 
