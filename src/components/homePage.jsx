@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import Background from "./background.png";
 import "./homePage.scss";
+import $ from "jquery";
 
 class Home extends Component {
   render() {
+    const goto = () => {
+      let checkbox = document.getElementById("tc");
+      if (checkbox.checked == true) {
+        $(".container__form__button").removeAttr("disabled");
+      } else {
+        $(".container__form__button").attr("disabled", true);
+      }
+    };
     const checkpass = () => {
       let pass = document.getElementById("pass").value;
       let confirm_pass = document.getElementById("confirm_pass").value;
@@ -41,7 +50,7 @@ class Home extends Component {
           </div>
         </div>
         <div className="container__form">
-          <form action="http://localhost:3000/" method="post">
+          <form action="/" method="post">
             <h2 className="container__form__heading">Create an account</h2>
             <table className="container__form__table">
               <tbody>
@@ -119,18 +128,28 @@ class Home extends Component {
                 </tr>
                 <tr>
                   <td>
-                    <input type="checkbox" name="terms_conditions" required />I
-                    read and agree Term and Conditions
+                    <input
+                      onClick={goto}
+                      id="tc"
+                      type="checkbox"
+                      name="terms_conditions"
+                      required
+                    />
+                    I read and agree Term and Conditions
                   </td>
                 </tr>
               </tbody>
             </table>
+            <a href="/graph">
+              <button
+                className="container__form__button"
+                type="button"
+                disabled
+              >
+                Create an account
+              </button>
+            </a>
           </form>
-          <a href="/graph">
-            <button className="container__form__button" type="submit">
-              Create an account
-            </button>
-          </a>
         </div>
       </div>
     );
