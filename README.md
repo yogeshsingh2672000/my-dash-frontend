@@ -2,7 +2,7 @@
 
 ###### run these command first
 
-###### step-1 npx create-react-app my-dash-frontend
+###### step-1 npx create-react-app my-dash-frontend (create your react-app)
 
 ###### step-2 npm install sass
 
@@ -14,8 +14,6 @@
 
 ###### step-6 clone my repo
 
-###### step-7 replace all your my-dash-frontend files except "node module" into your react-app
-
-###### step-8 npm start
+###### step-7 npm start
 
 ## Happy Coding
