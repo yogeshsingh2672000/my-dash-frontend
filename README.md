@@ -6,12 +6,16 @@
 
 ###### step-2 npm install sass
 
-###### step-3 fork the repo
+###### step-3 npm install d3
 
-###### step-4 clone my repo
+###### step-4 npm install jquery
 
-###### step-5 replace all your my-dash-frontend files except "node module" folder
+###### step-5 fork the repo
 
-###### step-6 npm start
+###### step-6 clone my repo
+
+###### step-7 replace all your my-dash-frontend files except "node module" folder
+
+###### step-8 npm start
 
 ## Happy Coding
