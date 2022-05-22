@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Background from "./background.png";
 import "./homePage.scss";
-// import graph from "./graph";
 
 class Home extends Component {
   render() {
@@ -42,7 +41,7 @@ class Home extends Component {
           </div>
         </div>
         <div className="container__form">
-          <form action="http://localhost:3000/" method="get">
+          <form action="http://localhost:3000/" method="post">
             <h2 className="container__form__heading">Create an account</h2>
             <table className="container__form__table">
               <tbody>
@@ -120,18 +119,18 @@ class Home extends Component {
                 </tr>
                 <tr>
                   <td>
-                    <input type="checkbox" name="terms_conditions" />I read and
-                    agree Term and Conditions
+                    <input type="checkbox" name="terms_conditions" required />I
+                    read and agree Term and Conditions
                   </td>
                 </tr>
               </tbody>
             </table>
-            <a href="">
-              <button className="container__form__button" type="submit">
-                Create an account
-              </button>
-            </a>
           </form>
+          <a href="/graph">
+            <button className="container__form__button" type="submit">
+              Create an account
+            </button>
+          </a>
         </div>
       </div>
     );
